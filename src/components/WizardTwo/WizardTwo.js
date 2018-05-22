@@ -23,7 +23,11 @@ class WizardTwo extends Component {
 }
 
 const mapStateToProps = state => {
-    city: state.city
+    const { city } = state;
+
+    return {
+        city 
+    }
 }
 
 export default connect( mapStateToProps, { updateCity } )( WizardTwo );
