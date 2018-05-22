@@ -16,114 +16,51 @@ import NextBtn from './components/NextBtn/NextBtn';
 import { Switch, Route } from 'react-router-dom';
 
 
-export default function(loanType, propType, changeLoanType, changePropertyType, changePropertyToBeUsedOn, propToBeUsedOn, city, updateCity, foundFalse, foundTrue, found, realEstateAgentTrue, realEstateAgentFalse, realEstateAgent, updateDownPayment, downPayment, updateCost, cost, credit, updateCreditE,updateCreditG, updateCreditF,updateCreditP, history, updateHistory, addressOne, addressTwo, addressThree, updateAddLineOne, updateAddLineTwo, updateAddLineThree, updateFirst, updateLast, updateEmail, firstName, lastName, email){
+export default (
 
-        return (
             <Switch>
-                <Route exact path= '/' render={()=> <NextBtn />} />
+                <Route 
+                    component={ NextBtn } 
+                    exact path= '/' />
 
                 <Route 
-                    path='/wOne' 
-                    render={ ()=> <WizardOne 
-                                    loanType={loanType} 
-                                    propType={propType} 
-                                    handleLoanType={changeLoanType} 
-                                    handlePropType={changePropertyType}/> } 
-                />
+                    component={ WizardOne }
+                    path='/wOne' />
                 <Route
-                    path="/wTwo" 
-                    render={ ()=> <WizardTwo 
-                                    city={city} 
-                                    updateCity={updateCity}/> } 
-                />
+                    component={ WizardTwo }
+                    path="/wTwo" />
                 <Route 
-                    path="/wThree" 
-                    render={ ()=> <WizardThree 
-                                    loanType={loanType} 
-                                    propType={propType} 
-                                    propToBeUsedOn={changePropertyToBeUsedOn} 
-                                    propUsedOn={propToBeUsedOn}/> } 
-                />
+                    component={ WizardThree }
+                    path="/wThree" />
                 <Route
-                    path='/wFour' 
-                    render={ ()=> <WizardFour 
-                                    foundFalse={foundFalse} 
-                                    foundTrue={foundTrue} 
-                                    found={found}/> }  
-                />
+                    component={ WizardFour }
+                    path='/wFour' />
                 <Route
-                    path="/wFive" 
-                    render={ ()=> <WizardFive 
-                                    realEstateAgentTrue={realEstateAgentTrue} 
-                                    realEstateAgentFalse={realEstateAgentFalse} 
-                                    realEstateAgent={realEstateAgent}/> }  
-                />
+                    component={ WizardFive }
+                    path="/wFive" />
                 <Route 
-                    path="/wSix" 
-                    render={ ()=> <WizardSix 
-                                    downPayment={downPayment} 
-                                    updateDownPayment={updateDownPayment} 
-                                    cost={cost} 
-                                    updateCost={updateCost}/> } 
-                />
+                    component={ WizardSix }
+                    path="/wSix" />
                 <Route 
-                    path="/wSeven" 
-                    render={ ()=> <WizardSeven 
-                                    credit={credit} 
-                                    updateCreditE={updateCreditE} 
-                                    updateCreditF={updateCreditF} 
-                                    updateCreditG={updateCreditG} 
-                                    updateCreditP={updateCreditP}/> } 
-                />
+                    component={ WizardSeven }
+                    path="/wSeven" />
                 <Route 
-                    path="/wEight" 
-                    render={ ()=> <WizardEight 
-                                    history={history} 
-                                    updateHistory ={updateHistory} /> } 
-                />
+                    component={ WizardEight }
+                    path="/wEight" />
                 <Route
-                    path="/wNine" 
-                    render={ ()=> <WizardNine 
-                                    addressOne={addressOne} 
-                                    addressTwo={addressTwo} 
-                                    addressThree={addressThree} 
-                                    updateAddLineOne={updateAddLineOne} 
-                                    updateAddLineTwo={updateAddLineTwo} 
-                                    updateAddLineThree={updateAddLineThree} /> } 
-                />
+                    component={ WizardNine }
+                    path="/wNine" />
                 <Route 
-                    path="/wTen"
-                    render={ ()=> <WizardTen 
-                                    firstName={firstName} 
-                                    lastName={lastName} email={email} 
-                                    updateFirst={updateFirst} 
-                                    updateLast={updateLast} 
-                                    updateEmail={updateEmail} /> } 
-                />
+                    component={ WizardTen }
+                    path="/wTen" />
                 <Route 
-                    path="/wEleven"
-                    render={ ()=> <WizardEleven 
-                                    firstName={firstName} 
-                                    lastName={lastName} 
-                                    email={email} 
-                                    loanType={loanType} 
-                                    propType={propType} 
-                                    propToBeUsedOn={propToBeUsedOn} 
-                                    city={city} 
-                                    found={found} 
-                                    realEstateAgent={realEstateAgent} 
-                                    downPayment={downPayment} 
-                                    cost={cost} 
-                                    credit={credit} 
-                                    history={history} 
-                                    addressOne={addressOne}
-                                    addressTwo={addressTwo} 
-                                    addressThree={addressThree} /> } 
-                />
-                <Route path='/finish' component={Finish} />
+                    component={ WizardEleven }
+                    path="/wEleven" />
+                <Route 
+                    component={Finish} 
+                    path='/finish' />
             </Switch>
-        )
-}
+    )
  
 
  
